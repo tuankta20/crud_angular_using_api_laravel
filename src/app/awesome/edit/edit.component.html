@@ -1,0 +1,30 @@
+<div class="card mt-2">
+  <h5 class="card-header">Create </h5>
+  <div class="card-body">
+    <form [formGroup]="updateAweSomeForm" (ngSubmit)="update()">
+      <table style="width: 80%">
+        <tr class="form-group">
+          <td><label>Tag</label></td>
+          <td><input style="border-radius: 30px" type="text" class="form-control" formControlName="tag"></td>
+        </tr>
+        <tr class="form-group ">
+          <td><label>Url</label></td>
+          <td><input style="border-radius: 30px" type="text" class="form-control" formControlName="url"></td>
+        </tr>
+        <tr class="form-group mt-3">
+          <td><label>Descriptions</label></td>
+          <td><textarea style="border-radius: 30px" class="form-control" formControlName="descriptions"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button style="border-radius: 30px" class="btn btn-primary">Update</button>
+            <button style="border-radius: 30px" class="btn btn-dark ml-2" routerLink="/awesome">Cancel</button>
+            <button style="border-radius: 30px" class="btn btn-danger  offset-7" (click)="delete()">Remove</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
